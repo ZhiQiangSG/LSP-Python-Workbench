@@ -1,0 +1,36 @@
+[
+  {
+    "candidate_id": "loop-o-proj-neg",
+    "category": "looping",
+    "module_name": "model.layers.12.self_attn.o_proj",
+    "block_index": 12,
+    "sign": -1,
+    "rank": 1,
+    "dose": 1.0,
+    "diagnostic_score": 1.42,
+    "d_in": 256,
+    "d_out": 256,
+    "footprint": 512,
+    "singular_values": [
+      4.2,
+      1.1
+    ]
+  },
+  {
+    "candidate_id": "loop-down-neg",
+    "category": "looping",
+    "module_name": "model.layers.12.mlp.down_proj",
+    "block_index": 12,
+    "sign": -1,
+    "rank": 1,
+    "dose": 1.0,
+    "diagnostic_score": 1.18,
+    "d_in": 512,
+    "d_out": 256,
+    "footprint": 768,
+    "singular_values": [
+      3.8,
+      0.9
+    ]
+  }
+]

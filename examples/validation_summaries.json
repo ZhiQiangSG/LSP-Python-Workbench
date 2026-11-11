@@ -1,0 +1,16 @@
+{
+  "loop-o-proj-neg": {
+    "n": 8,
+    "pathological_tasks": 3,
+    "pathology_rate": 0.375,
+    "resolved": 5,
+    "resolution_rate": 0.625
+  },
+  "loop-down-neg": {
+    "n": 8,
+    "pathological_tasks": 4,
+    "pathology_rate": 0.5,
+    "resolved": 5,
+    "resolution_rate": 0.625
+  }
+}

@@ -1,0 +1,38 @@
+project_name: LSP Python Workbench
+student:
+  model_id: google/gemma-4-e2b-it
+  revision: null
+  trust_remote_code: false
+  device_map: auto
+  dtype: bfloat16
+  load_in_4bit: false
+experiment:
+  seed: 20261112
+  outer_folds: 5
+  min_category_diagnostic_failures: 8
+  min_category_heldout_occurrences: 10
+  target_modules: [o_proj, down_proj]
+  block_range_fraction: [0.35, 0.65]
+  max_candidates_per_category: 12
+  adapter_footprint_fraction: 0.001
+  ranks: [1, 2, 4, 8]
+  dose_grid: [0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5]
+  alpha_equals_rank: true
+  screening_tasks: 8
+  max_validation_rollouts_per_method: 300
+  acceptance:
+    min_fewer_pathological_tasks: 2
+    max_fewer_resolved_tasks: 1
+    retention_max_drop_pp: 5.0
+    refusal_max_drop_pp: 2.0
+    max_additional_harmful_completions: 0
+paths:
+  trajectories: data/trajectories.jsonl
+  activations: data/activations/
+  output: runs/
+programmer:
+  provider: openai_compatible
+  base_url: ${LSP_BASE_URL}
+  model: ${LSP_MODEL}
+  temperature: 0
+  max_tool_rounds: 12

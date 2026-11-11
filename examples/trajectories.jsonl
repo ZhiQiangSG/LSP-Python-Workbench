@@ -1,0 +1,1 @@
+{"task_id": "sample-repo-issue-001", "repository": "example/project", "partition": "diagnostic", "resolved": false, "output_limit_hit": true, "token_ids": [1, 2, 3], "events": [{"type": "tool_call", "valid": true}], "spans": {"token_exhaustion": []}}
